@@ -18,11 +18,16 @@ This sheet decides which sheets will be exported. The sheet number of the MS2 sh
 - The first 28 columns (A to AB) represent the general information of the molecules and the structural information to be exported.
 - The peak information (X peaks) of the molecules’ MS2 is saved in the following peak columns. Columns from 29 to 28+X record the m/z value of the peak, and columns from 29+X to 28+2*X record the peak height. In one datasheet, all molecules should have the same peak columns. A 0 value can be used and will be ignored during the exportation.
 <div align=center>
-<img src="./Figs/fig3.png" style="width: 80%; max-width: 100%;">
+<img src="./Figs/fig3.png" style="width: 90%; max-width: 100%;">
 </div>
 ## 2. Install package dependencies
 - This program is up-to-date to work with Python 3.12
 - tqdm (https://github.com/tqdm/tqdm）
+- openpyxl (https://openpyxl.readthedocs.io/)
+```
+pip install tqdm
+pip install openpyxl
+```
 ## 3. Export the library
 Save your data file in the folder: **Files_for_construction**.
 Then you can export the library by running the **PoolExport.py** script with the default setting. The exported .msp library files can be found in **Exported_msp** folder.
@@ -32,7 +37,7 @@ python PoolExport.py
 You can edit the following scripts to modify the parameters for exportation.
 ### **PoolExport.py** controls the overall parameters during the exportation.
 <div align=center>
-<img src="./Figs/fig4.png" style="width: 80%; max-width: 100%;">
+<img src="./Figs/fig4.png" style="width: 90%; max-width: 100%;">
 </div>
 - **folder_path**: Specify the directory of the .xlsm data files.
 - **include_path**: "1" only read the datafile in folder_path. "2" also read the datafile in the subfolders of the folder_path.
@@ -45,15 +50,15 @@ False: Do not combine files while exporting.
 ### **SingleExport.py** controls the exportation of a single data file.
 - **importadduct()**: Specify the adduct ion of the library to be exported.
 <div align=center>
-<img src="./Figs/fig5.png" style="width: 80%; max-width: 100%;">
+<img src="./Figs/fig5.png" style="width: 90%; max-width: 100%;">
 </div>
 - **single_msp_export()**: Lines 49-62 specify the structural information in the data file to be exported.
 <div align=center>
-<img src="./Figs/fig6.png" style="width: 80%; max-width: 100%;">
+<img src="./Figs/fig6.png" style="width: 90%; max-width: 100%;">
 </div>
 ### **MSPfix.py** controls the standardization of the MS2 in MSP library.
 <div align=center>
-<img src="./Figs/fig7.png" style="width: 80%; max-width: 100%;">
+<img src="./Figs/fig7.png" style="width: 90%; max-width: 100%;">
 </div>
 - **peak_cal()**: all peaks will be linearly transformed, and the maximum peak abundance will be set as the max_peak parameter. After the transformation, peak abundance lower than min_peak will be removed.
 ## Citation and acknowledgment:
