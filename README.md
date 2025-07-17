@@ -37,20 +37,20 @@ Then you can export the library by running the **PoolExport.py** script with the
 ```
 python PoolExport.py
 ```
-You can edit the following scripts to modify the parameters for exportation.
 ### **PoolExport.py** controls the overall parameters during the exportation.
-<div align=center>
-<img src="./Figs/fig4.png" style="width: 90%; max-width: 100%;">
-</div>
 
-- **folder_path**: Specify the directory of the .xlsm data files.
-- **include_path**: "1" only read the datafile in folder_path. "2" also read the datafile in the subfolders of the folder_path.
-- **export_path**: Specify the directory of the exportated files.
-- **fix_file**: "True": Standardize the MS2 in the MSP library, unify the maximum peak, remove replicate peaks, and remove low peaks. "False": Do not standardize the MS2.
-- **merge_at_end**: "True": Combine all the exported files into one file. "False": Do not combine files.
-- **merge_while_processing** (More efficient than **merge_at_end** method, but the result file will not in the original order): True: Combine files while exporting files. 
+- **--folder_path**: Specify the directory of the .xlsm data files.
+- **--include_path**: "1" only read the datafile in folder_path. "2" also read the datafile in the subfolders of the folder_path (default: 2).
+- **--export_path**: Specify the directory of the exportated files.
+- **--standardization**: "True": Standardize the MS2 in the MSP library, unify the maximum peak, remove replicate peaks, and remove low peaks. "False": Do not standardize the MS2.
+- **--max_peak**: Maximum peak height after standardization (default: 1000).
+- **--min_peak**: Peak height below will be filtered (default: 0.1).
+- **--merge_at_end**: "True": Combine all exported .msp files into one .msp file. "False": Do not combine files (default: False).
+- **--merge_while_processing** (More efficient than **merge_at_end** method, but the result file will not in the original order): True: Combine files while exporting files (default: True). 
 False: Do not combine files while exporting.
-- **threads**: Threads number used in this exportation. Use "0" for the maximum threads.
+- **--delete_intermediate**: "True": Delete intermediate files (default: False).
+- **--threads**: Threads number used in this exportation. Use "0" for the maximum threads (default: 0).
+  
 ### **SingleExport.py** controls the exportation of a single data file.
 - **importadduct()**: Specify the adduct ion of the library to be exported.
 <div align=center>
@@ -66,8 +66,6 @@ False: Do not combine files while exporting.
 <div align=center>
 <img src="./Figs/fig7.png" style="width: 90%; max-width: 100%;">
 </div>
-
-- **peak_cal()**: all peaks will be linearly transformed, and the maximum peak abundance will be set as the max_peak parameter. After the transformation, peak abundance lower than min_peak will be removed.
 ## Citation and acknowledgment:
 This program is inspired and modified from Lipidblast. https://fiehnlab.ucdavis.edu/projects/LipidBlast
 
