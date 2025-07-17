@@ -47,11 +47,11 @@ python PoolExport.py
 - **--min_peak**: Peak height below will be filtered (default: 0.1).
 - **--merge_at_end**: "True": Combine all exported .msp files into one .msp file. "False": Do not combine files (default: False).
 - **--merge_while_processing** (More efficient than **merge_at_end** method, but the result file will not in the original order): True: Combine files while exporting files (default: True). 
-False: Do not combine files while exporting.
 - **--delete_intermediate**: "True": Delete intermediate files (default: False).
 - **--threads**: Threads number used in this exportation. Use "0" for the maximum threads (default: 0).
 
-The following scripts can be modified for specific purpose:
+## The following scripts can be modified for specific purpose:
+
 ### **SingleExport.py** controls the exportation of a single data file.
 - **importadduct()**: Specify the adduct ion of the library to be exported.
 <div align=center>
