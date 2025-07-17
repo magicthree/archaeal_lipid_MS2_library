@@ -63,6 +63,6 @@ python PoolExport.py
 <img src="./Figs/fig6.png" style="width: 90%; max-width: 100%;">
 </div>
 
-## Citation and acknowledgment:
+## Citation and acknowledgement:
 This program is inspired and modified from Lipidblast. https://fiehnlab.ucdavis.edu/projects/LipidBlast
 
