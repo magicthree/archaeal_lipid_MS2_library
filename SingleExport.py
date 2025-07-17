@@ -5,7 +5,7 @@ from MSPfix import fix_file
 def import_adduct():
     return [["[M+H]+", 1.007276], ["[M+NH4]+", 18.03382]]
 
-def single_msp_export(folder_path,file_name,export_path=None,newdir=None,fix=True):
+def single_msp_export(folder_path,file_name,export_path=None,newdir=None,fix=True,max_peak=1000,min_peak=0.1):
     try:
         adducts = import_adduct()
         if export_path is None:
@@ -68,7 +68,7 @@ def single_msp_export(folder_path,file_name,export_path=None,newdir=None,fix=Tru
 
         f.close()
         if fix:
-            fix_file(export_path,newdir)
+            fix_file(export_path,newdir,max_peak,min_peak)
             print(newdir + " file.msp fixed")
     except Exception as e:
         print(file_name + "###################failed#################" + e)

@@ -1,4 +1,4 @@
-def fix_file(file_path,file_name):
+def fix_file(file_path,file_name,max_peak,min_peak):
     fixed_file= file_name + ".msp"
 
     r = open(file_path + '\\' + file_name, 'r')#正式读写
@@ -16,7 +16,7 @@ def fix_file(file_path,file_name):
                 peak_list.append(lines.strip('\n'))
                 lines = r.readline()
 
-            new_peak_list=peak_cal(peak_list)
+            new_peak_list=peak_cal(peak_list,max_peak,min_peak)
             f.write('Num Peaks: '+ str(len(new_peak_list))+'\n')
             for peaks in range(0, len(new_peak_list)):
                 f.write(str(round(new_peak_list[peaks][0],5)) + " " + str(round(new_peak_list[peaks][1],5)) +" "+ new_peak_list[peaks][2] + '\n')
