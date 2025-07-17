@@ -50,7 +50,8 @@ python PoolExport.py
 False: Do not combine files while exporting.
 - **--delete_intermediate**: "True": Delete intermediate files (default: False).
 - **--threads**: Threads number used in this exportation. Use "0" for the maximum threads (default: 0).
-  
+
+The following scripts can be modified for specific purpose:
 ### **SingleExport.py** controls the exportation of a single data file.
 - **importadduct()**: Specify the adduct ion of the library to be exported.
 <div align=center>
@@ -62,10 +63,6 @@ False: Do not combine files while exporting.
 <img src="./Figs/fig6.png" style="width: 90%; max-width: 100%;">
 </div>
 
-### **MSPfix.py** controls the standardization of the MS2 in MSP library.
-<div align=center>
-<img src="./Figs/fig7.png" style="width: 90%; max-width: 100%;">
-</div>
 ## Citation and acknowledgment:
 This program is inspired and modified from Lipidblast. https://fiehnlab.ucdavis.edu/projects/LipidBlast
 
