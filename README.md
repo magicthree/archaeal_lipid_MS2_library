@@ -1,5 +1,11 @@
 # Archaeal_lipid_MS2_library
-This program is designed to create an MS2 library for lipidomic analysis. 
+This program is designed to create an in silico MS2 library for lipidomic analysis. 
+
+You can find the ArchLips MS2 library in: https://doi.org/10.5281/zenodo.16040382
+
+To use this library you can cite: ArchLips: A comprehensive in silico database for high-throughput identification of archaeal lipids
+https://doi.org/10.1101/2025.05.05.652033
+
 ## 1. Prepare your data as the template file shows: Diether-template.xlsm/Tetraether-template.xlsm
 - **Statistic Sheet**: 
 Save the additional information of the molecules: eg., Formula, inchi, Smile, references. This information will not affect the exportation result.
