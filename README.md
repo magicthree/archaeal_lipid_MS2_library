@@ -62,7 +62,7 @@ python PoolExport.py
 ## The following scripts can be modified for specific purpose:
 
 ### **SingleExport.py** controls the exportation of a single data file.
-- **importadduct()**: Specify the adduct ion of the library to be exported.
+- **import_adduct()**: Specify the adduct ion of the library to be exported.
 <div align=center>
 <img src="./Figs/fig5.png" style="width: 90%; max-width: 100%;">
 </div>
