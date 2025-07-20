@@ -1,9 +1,12 @@
 # Archaeal_lipid_MS2_library
 This program is designed to create an in silico MS2 library for lipidomic analysis. 
 
-You can find the ArchLips MS2 library in: https://doi.org/10.5281/zenodo.16040382
+You can find our ArchLips MS2 library (.msp format) in: https://doi.org/10.5281/zenodo.16040382
 
-To use this library you can cite: ArchLips: A comprehensive in silico database for high-throughput identification of archaeal lipids
+To use this library, you can cite: 
+
+ArchLips: A comprehensive in silico database for high-throughput identification of archaeal lipids
+
 https://doi.org/10.1101/2025.05.05.652033
 
 ## 1. Prepare your data as the template file shows: Diether-template.xlsm/Tetraether-template.xlsm
@@ -43,7 +46,7 @@ Then you can export the library by running the **PoolExport.py** script with the
 ```
 python PoolExport.py
 ```
-### **PoolExport.py** controls the overall parameters during the exportation.
+### Parameters for **PoolExport.py**
 
 - **--folder_path**: Specify the directory of the .xlsm data files.
 - **--include_path**: "1" only read the datafile in folder_path. "2" also read the datafile in the subfolders of the folder_path (default: 2).
