@@ -5,9 +5,10 @@ You can find our ArchLips MS2 library (.msp format) in: https://doi.org/10.5281/
 
 To use this library, you can cite: 
 
-ArchLips: A comprehensive in silico database for high-throughput identification of archaeal lipids
+A comprehensive database for high-throughput identification of archaeal lipids using high-resolution mass spectrometry
 
-https://doi.org/10.1101/2025.05.05.652033
+https://doi.org/10.1038/s41467-025-67286-3
+
 
 ## 1. Prepare your data as the template file shows: Diether-template.xlsm/Tetraether-template.xlsm
 - **Statistic Sheet**: 
